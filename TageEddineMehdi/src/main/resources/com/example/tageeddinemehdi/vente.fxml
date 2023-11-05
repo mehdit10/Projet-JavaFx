@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tageeddinemehdi.Controlleurs.VenteControlleur">
+   <children>
+      <Pane prefHeight="99.0" prefWidth="1089.0" style="-fx-background-color: #2C2C54;">
+         <children>
+            <Label layoutX="336.0" layoutY="30.0" text="Gestion des Ventes">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="39.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.6022727272727273" endY="1.0" startX="0.23484846859267264" startY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="0.44999998807907104" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Button layoutX="-3.0" layoutY="-4.0" mnemonicParsing="false" onAction="#btnWindowBack" prefHeight="103.0" prefWidth="102.0" style="-fx-background-color: green;" text="Retour" textFill="WHITE">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <ImageView fitHeight="306.0" fitWidth="225.0" layoutX="73.0" layoutY="18.0">
+         <image>
+            <Image url="@CFOA-Logo.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="439.0" layoutY="226.0" prefHeight="558.0" prefWidth="615.0" style="-fx-background-color: darkgrey;">
+         <children>
+            <TableView fx:id="table" layoutY="65.0" prefHeight="491.0" prefWidth="615.0">
+               <columns>
+                  <TableColumn fx:id="idcol" prefWidth="205.0" text="ID" />
+                  <TableColumn fx:id="montcol" prefWidth="205.0" text="Montant" />
+                  <TableColumn fx:id="datecol" minWidth="5.5999755859375" prefWidth="205.0" text="Date" />
+               </columns>
+            </TableView>
+            <Label layoutX="14.0" layoutY="29.0" text="Rechercher">
+               <font>
+                  <Font name="Bank Gothic Light BT" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtsearch" layoutX="147.0" layoutY="25.0" style="-fx-background-color: white;" />
+            <Button fx:id="btnsearch" layoutX="308.0" layoutY="23.0" minWidth="53.0" mnemonicParsing="false" onAction="#search" prefHeight="30.0" prefWidth="53.0" style="-fx-background-color: ORANGE;" text="OK">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="371.0" layoutY="23.0" mnemonicParsing="false" onAction="#btnSearchAll" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: green;" text="Voir tout">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="39.0" layoutY="324.0" prefHeight="306.0" prefWidth="371.0" style="-fx-background-color: darkgrey;">
+         <children>
+            <Label layoutX="16.0" layoutY="71.0" text="Montant">
+               <font>
+                  <Font name="Bank Gothic Light BT" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="32.0" layoutY="140.0" text="Date">
+               <font>
+                  <Font name="Bank Gothic Light BT" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtmont" layoutX="122.0" layoutY="73.0" style="-fx-background-color: white;" />
+            <Button fx:id="btnsave" layoutX="16.0" layoutY="205.0" mnemonicParsing="false" onAction="#save" style="-fx-background-color: #0CC747;" text="Enregistrer" />
+            <Button fx:id="btnmaj" layoutX="122.0" layoutY="205.0" mnemonicParsing="false" onAction="#Maj" style="-fx-background-color: #418ACE;" text="Mettre a jour" />
+            <Button fx:id="btnsup" layoutX="235.0" layoutY="205.0" mnemonicParsing="false" onAction="#supp" style="-fx-background-color: red;" text="Supprimer" />
+            <DatePicker fx:id="txtdate" layoutX="109.0" layoutY="136.0" />
+         </children>
+      </Pane>
+      <Text layoutX="59.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Voici votre formulaire des ventes de voitures. Vous pouvez Ajouter, Modifier ou Supprimer les ventes journaliere" wrappingWidth="331.77618408203125">
+         <font>
+            <Font name="Bank Gothic Light BT" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="443.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Voici le tableau de toutes les ventes journaliere enregistrer dans la base de données. Pour modifier une vente, veuillez rechercher son ID et cliquer dessus. Les informations de cette vente apparaîtront dans le formulaire et vous pourrez mettre à jour les paramètres." wrappingWidth="607.001220703125">
+         <font>
+            <Font name="Bank Gothic Light BT" size="16.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

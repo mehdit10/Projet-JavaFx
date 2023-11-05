@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="553.0" prefWidth="1000.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tageeddinemehdi.Controlleurs.accuel_userControlleur">
+   <children>
+      <ImageView fitHeight="668.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@acceuil.jpg" />
+         </image>
+      </ImageView>
+      <Pane prefHeight="70.0" prefWidth="1000.0" style="-fx-background-color: grey;" AnchorPane.bottomAnchor="596.8000000000001" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-2.842170943040401E-14">
+         <children>
+            <Label layoutX="73.0" layoutY="18.0" text="Bienvenue dans votre espace Utilisateur">
+               <font>
+                  <Font name="Bank Gothic Light BT" size="32.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="0.9584602117538452" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+            <Button layoutX="875.0" layoutY="1.0" mnemonicParsing="false" onAction="#btnDeconnect" prefHeight="70.0" prefWidth="125.0" style="-fx-background-color: #CC7B00;" text="Deconnexion">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <HBox layoutY="70.0" prefHeight="70.0" prefWidth="1000.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#btn_cli" onMouseEntered="#entinfoveA1" onMouseExited="#exinfoveA1" prefHeight="70.0" prefWidth="250.0" style="-fx-background-color: tomato;" text="Clients">
+               <font>
+                  <Font name="Bank Gothic Light BT" size="16.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#btn_vente" onMouseEntered="#entinfoveA2" onMouseExited="#exinfoveA2" prefHeight="70.0" prefWidth="250.0" style="-fx-background-color: tomato;" text="Ventes de Voitures">
+               <font>
+                  <Font name="Bank Gothic Light BT" size="16.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#btn_voiture" onMouseEntered="#entinfoveA3" onMouseExited="#exinfoveA3" prefHeight="70.0" prefWidth="250.0" style="-fx-background-color: tomato;" text="Voitures">
+               <font>
+                  <Font name="Bank Gothic Light BT" size="16.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#btn_userA" onMouseEntered="#entinfoveA4" onMouseExited="#exinfoveA4" prefHeight="70.0" prefWidth="250.0" style="-fx-background-color: tomato;" text="Utilisateurs">
+               <font>
+                  <Font name="Bank Gothic Light BT" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <Pane fx:id="paneVe1" layoutX="32.0" layoutY="159.0" opacity="0.8" prefHeight="200.0" prefWidth="191.0" style="-fx-background-color: grey;" visible="false">
+         <children>
+            <Text fill="#02ff00" layoutX="10.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Voici votre Gestionnaire des clients. Ici, vous pourrez Ajouter, Modifier et Supprimer un client." wrappingWidth="181.0">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane fx:id="paneVe2" layoutX="285.0" layoutY="233.0" opacity="0.8" prefHeight="200.0" prefWidth="191.0" style="-fx-background-color: grey;" visible="false">
+         <children>
+            <Text fill="#02ff00" layoutX="14.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Voici votre Gestionnaires de ventes de voitures. Ici, vous pourrez Enregistrer les ventes journalieres." wrappingWidth="170.13671875">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane fx:id="paneVe3" layoutX="542.0" layoutY="334.0" opacity="0.8" prefHeight="200.0" prefWidth="181.0" style="-fx-background-color: grey;" visible="false">
+         <children>
+            <Text fill="#02ff00" layoutX="14.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Voici votre Gestionnaire des voitures. Ici vous pourrez Enregistrer ou Rechercher une voiture." wrappingWidth="159.7366943359375">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane fx:id="paneVe4" layoutX="793.0" layoutY="395.0" opacity="0.8" prefHeight="200.0" prefWidth="181.0" style="-fx-background-color: grey;" visible="false">
+         <children>
+            <Text layoutX="14.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cet espace reserver aux Administrateurs. Vous ne pouvez pas y acceder" wrappingWidth="159.7366943359375">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
